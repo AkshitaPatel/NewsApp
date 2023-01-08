@@ -43,20 +43,20 @@ export class News extends Component {
     return (
       <div className="container my-3">
         <h2>NewsMonkey - Top Headlines</h2>
+
         <div className="row">
-          <div className="col-md-4">
-            <NewsItem
-              title="myTitle"
-              description="my description"
-              imageUrl="https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg"
-            ></NewsItem>
-          </div>
-          <div className="col-md-4">
-            <NewsItem title="myTitle" description="my description"></NewsItem>
-          </div>
-          <div className="col-md-4">
-            <NewsItem title="myTitle" description="my description"></NewsItem>
-          </div>
+          {this.state.articles.map((element) => {
+            return (
+              <div className="col-md-4" key={element.url}>
+                <NewsItem
+                  title={element.title.slice(0, 45)}
+                  description={element.description.slice(0, 88)}
+                  imageUrl={element.urlToImage}
+                  newsUrl={element.url}
+                ></NewsItem>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
