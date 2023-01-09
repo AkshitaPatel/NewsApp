@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export default class App extends Component {
   pageSize = 10;
+  apiKey = process.env.REACT_APP_API_KEY;
   render() {
     return (
       <div className="">
@@ -20,6 +21,7 @@ export default class App extends Component {
                 pageSize={this.pageSize}
                 country="in"
                 category="general"
+                apiKey={this.apiKey}
               />
             </Route>
             <Route exact path="/business">
@@ -28,6 +30,7 @@ export default class App extends Component {
                 pageSize={this.pageSize}
                 country="in"
                 category="business"
+                apiKey={this.apiKey}
               />
             </Route>
             <Route exact path="/entertainment">
@@ -36,6 +39,7 @@ export default class App extends Component {
                 pageSize={this.pageSize}
                 country="in"
                 category="entertainment"
+                apiKey={this.apiKey}
               />
             </Route>
             <Route exact path="/science">
@@ -44,6 +48,7 @@ export default class App extends Component {
                 pageSize={this.pageSize}
                 country="in"
                 category="science"
+                apiKey={this.apiKey}
               />
             </Route>
             <Route exact path="/health">
@@ -52,6 +57,7 @@ export default class App extends Component {
                 pageSize={this.pageSize}
                 country="in"
                 category="health"
+                apiKey={this.apiKey}
               />
             </Route>
             <Route exact path="/sports">
@@ -60,6 +66,7 @@ export default class App extends Component {
                 pageSize={this.pageSize}
                 country="in"
                 category="sports"
+                apiKey={this.apiKey}
               />
             </Route>
             <Route exact path="/technology">
@@ -68,6 +75,7 @@ export default class App extends Component {
                 pageSize={this.pageSize}
                 country="in"
                 category="technology"
+                apiKey={this.apiKey}
               />
             </Route>
           </Switch>
