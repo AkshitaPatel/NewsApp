@@ -108,6 +108,9 @@ export class News extends Component {
                         : "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2022/12/0/0/TESLA-PRICES-e1672173644348.jpg?ve=1&tl=1"
                     }
                     newsUrl={element.url}
+                    author={element.author}
+                    date={element.publishedAt.slice(0, 10)}
+                    source={element.source.name}
                   ></NewsItem>
                 </div>
               );
