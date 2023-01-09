@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div>
         <Navbar></Navbar>
-        <News pageSize="5"></News>
+        <News pageSize={5} category="science" country="in"></News>
       </div>
     );
   }
